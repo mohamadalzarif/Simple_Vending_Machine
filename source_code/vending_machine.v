@@ -1,24 +1,14 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 10/24/2022 11:09:32 PM
-// Design Name: 
-// Module Name: vending_machine
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
 
+//Assumption for coins combinations are: user will enter 3*5 cents (no money remaining)
+// user will enter 2*10 cents(5 cent remaining)
+// user will enter 1*5 cents and 1* 10 cents (no money remaining)
+
+
+//coin_in_en: enable, active high, 1, when user enters coin
+//coin_val: when 0 user enters 5 cent, when 1 user enters 10 cent
+//pencil_out: when 1 pencil will be out from the vending machine
+//extra_money: when 1 pencil will return 5 cent for the user as remaining money
 
 module vending_machine(input clk, reset, coin_in_en, coin_val, output reg pencil_out,output reg [2:0] extra_money
 
